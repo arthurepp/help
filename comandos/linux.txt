@@ -1,0 +1,8 @@
+--copiar pasta e seu conteudo
+cp -a /source/. /dest/
+--apagar pasta
+rm -r mydir
+--apagar arquivo
+rm -r 
+--verificar o estado da memória
+watch -n 5 free -m

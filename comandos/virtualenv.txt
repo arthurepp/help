@@ -1,0 +1,11 @@
+--comando para criar ambiente virtual (windows, Linux e OSX)
+virtualenv venv
+
+--comando para criar ambiente virtual (windows, Linux e OSX) com python 3
+virtualenv -p python3.6 venv
+--comando para ativar o ambiente virtual no Windows
+venv\Scripts\activate
+--comando para ativar o ambiente virtual no Linux ou OSX
+source venv/bin/activate
+--comando para desativar o ambiente virtual
+deactivate

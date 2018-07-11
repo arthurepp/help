@@ -1,0 +1,10 @@
+--comando para adicionar um pacote ao projeto
+dotnet add package Newtonsoft.Json
+--comando para adicionar um pacote à um projeto específico com especificação de versão
+dotnet add ToDo.csproj package Microsoft.Azure.DocumentDB.Core -v 1.0.0
+--comando para adicionar mecanismo de recompilação ao salvar arquivo
+dotnet add package Microsoft.DotNet.Watcher.Tools
+--conteúdo necessário no arquivo csproj para mecanismo de recompilação automática
+<ItemGroup><DotNetCliToolReference Include="Microsoft.DotNet.Watcher.Tools" Version="1.0.1" /></ItemGroup>
+--comando para executar recompilando ao salvar arquivos
+dotnet watch run

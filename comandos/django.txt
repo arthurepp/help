@@ -1,0 +1,16 @@
+--comando para criar projeto
+django-admin startproject **nome do projeto**
+--comando para criar um app
+python manage.py startapp **nome do app**
+--comando para marcar as alterações feitas nos modelos da aplicação
+python manage.py makemigrations **nome do app**
+--comando para persistir as alterações feitas
+python manage.py migrate
+--comando para criar super usuário
+python manage.py createsuperuser
+--comando para resetar as migrações de uma aplicação
+python manage.py makemigrations --empty yourappname
+
+--comando para mapear banco de dados legado
+
+python manage.py inspectdb > models.py

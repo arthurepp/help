@@ -1,0 +1,34 @@
+--comandos para stopar e remover os containers
+docker stop $(docker ps -a -q)
+docker rm $(docker ps -a -q)
+
+--comando para criar imagem baseado em uma arquivo docker na mesma pasta
+docker build -t "nome da imagem" .
+--comando para habilitar os serviços swarm do docker
+docker swarm init
+--comando para criar um servico swarm
+docker service create --publish 80:80 --replicas 2 --update-delay 5s --name "nome do servico" "nome da imagem"
+--comando para atualizar um servico com nova imagem
+docker service update --image "nome da imagem" "nome do servico"
+
+
+--comando para listar os container ativos
+
+docker ps
+
+--comando para copiar um backup de sqlserver para docker
+
+docker cp "arquivo" "id do container":"caminho que será copiado"
+
+
+--comandos para limpar a máquina
+
+docker system prune
+ou
+docker image prune
+docker container prune
+docker volume prune
+docker network prune
+--comando para subir container no compose sem recriar nenhum outro container
+docker-compose up --no-deps -d web
+

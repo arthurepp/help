@@ -1,0 +1,12 @@
+//iniciar serviço
+sudo service mongod start
+//mostrar bases no servidor
+show dbs
+//mudar para base
+use 'nome da base'
+//busca
+db."nome da collection".find()
+ou com paramentro
+db."nome da collection".find({ "nome": "arthur" })
+//para contagem
+db."nome da collection".count()

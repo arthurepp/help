@@ -1,0 +1,36 @@
+—comando para iniciar o git
+git init
+—comando para adicionar os arquivos da pasta
+git add .
+ou
+git add -A 
+—comando para gravar os arquivos alterados no repositório local
+git commit -m “mensagem de 50 caracteres”
+-comando para atualizar repositorio local
+
+git pull
+—comando para adicionar repositório remoto
+git remote add origin "URL"
+-comando para copiar os arquivos de um repositório remoto
+git clone "URL"
+-comando para desfazer as ultimas alterações
+
+git reset --hard
+
+github
+-comando para adicionar repositório remoto
+git remote add origin "URL"
+—comando para gravar no repositório remoto
+git push -u origin master
+
+azure 
+-comando para adicionar repositório remoto
+git remote add azure https://<username>@localgitdeployment.scm.azurewebsites.net:443/localgitdeployment.git         
+—comando para gravar no repositório remoto
+git push azure master
+
+visual studio team services
+-comando para adicionar repositório remoto
+git remote add origin "URL"
+—comando para gravar no repositório remoto
+git push -u origin --all

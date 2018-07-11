@@ -1,0 +1,16 @@
+Backup
+mysqldump -u root -p BaseDeDados > NomeDoArquivoDeBackup.sql
+
+Restore
+mysql -u root -p BaseDeDados < NomeDoArquivoDeBackup.sql
+
+Criar base de dados utf8
+CREATE DATABASE mydatabase CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+Cria usuário
+CREATE USER 'novousuario'@'localhost' IDENTIFIED BY 'password';
+
+Conceder privilegios ao usuário
+GRANT ALL PRIVILEGES ON * . * TO 'novousuario'@'localhost';
+
+FLUSH PRIVILEGES;
