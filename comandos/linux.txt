@@ -4,5 +4,7 @@ cp -a /source/. /dest/
 rm -r mydir
 --apagar arquivo
 rm -r 
---verificar o estado da mem�ria
+--verificar o estado da memória
 watch -n 5 free -m
+--lista espaço em disco
+df -H
