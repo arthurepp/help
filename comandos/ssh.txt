@@ -1,0 +1,2 @@
+--conectar via ssh
+ssh usuario@ip 
