@@ -1,3 +1,6 @@
+--instalar o virtualenv
+pip install virtualenv
+
 --comando para criar ambiente virtual (windows, Linux e OSX)
 virtualenv venv
 
