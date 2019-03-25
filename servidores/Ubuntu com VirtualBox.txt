@@ -1,15 +1,12 @@
 --Atualizar ubuntu
-sudo apt-get update
-sudo apt-get upgrade
-sudo apt-get dist-upgrade
+sudo apt update
+sudo apt upgrade
+sudo apt dist-upgrade
 
---Instalar virtualbox addins
-sudo apt-get install -y dkms build-essential
-habilitar a instalação do cd para addin do virtualbox
-sudo mount /dev/cdrom /media/cdrom
-sudo /media/cdrom/VBoxLinuxAdditions.run
-sudo adduser arthur vboxsf
-sudo reboot
-
---Mudar o nome da máquina
-hostnamectl set-hostname novo_nome
+--clicar em dispositivos/inserir imagem de CD dos adicionais para Convidado
+sudo mount /dev/cdrom /mnt
+cd /mnt
+sudo apt-get install -y dkms build-essential linux-headers-generic linux-headers-$(uname -r)
+sudo su
+./VboxLinuxAdditions.run
+reboot
