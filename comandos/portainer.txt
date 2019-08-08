@@ -1,0 +1,4 @@
+--se a instalação for no docker for desktop do windows, nas configurações, habilitar o item "expose daemon on tcp://localhost:2375 withou tls"
+--executar os comandos abaixo no prompt ou powershell
+docker volume create portainer_data
+docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
