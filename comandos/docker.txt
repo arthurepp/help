@@ -4,7 +4,7 @@ docker rm $(docker ps -a -q)
 
 --comando para criar imagem baseado em uma arquivo docker na mesma pasta
 docker build -t "nome da imagem" .
---comando para habilitar os serviÁos swarm do docker
+--comando para habilitar os servi√ßos swarm do docker
 docker swarm init
 --comando para criar um servico swarm
 docker service create --publish 80:80 --replicas 2 --update-delay 5s --name "nome do servico" "nome da imagem"
@@ -18,10 +18,10 @@ docker ps
 
 --comando para copiar um backup de sqlserver para docker
 
-docker cp "arquivo" "id do container":"caminho que ser· copiado"
+docker cp "arquivo" "id do container":"caminho que ser√° copiado"
 
 
---comandos para limpar a m·quina
+--comandos para limpar a m√°quina
 
 docker system prune
 ou
@@ -32,3 +32,5 @@ docker network prune
 --comando para subir container no compose sem recriar nenhum outro container
 docker-compose up --no-deps -d web
 
+--executar bash no container
+docker exec it (id do container) sh
