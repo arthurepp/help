@@ -2,15 +2,16 @@
 django-admin startproject **nome do projeto**
 --comando para criar um app
 python manage.py startapp **nome do app**
---comando para marcar as alteraÁıes feitas nos modelos da aplicaÁ„o
+--comando para marcar as altera√ß√µes feitas nos modelos da aplica√ß√£o
 python manage.py makemigrations **nome do app**
---comando para persistir as alteraÁıes feitas
+--comando para persistir as altera√ß√µes feitas
 python manage.py migrate
---comando para criar super usu·rio
+--comando para criar super usu√°rio
 python manage.py createsuperuser
---comando para resetar as migraÁıes de uma aplicaÁ„o
+--comando para resetar as migra√ß√µes de uma aplica√ß√£o
 python manage.py makemigrations --empty yourappname
-
 --comando para mapear banco de dados legado
-
 python manage.py inspectdb > models.py
+--comandos para resetar os registros de migra√ß√µes (para mac e linux)
+find . -path "*/migrations/*.py" -not -name "__init__.py" -delete
+find . -path "*/migrations/*.pyc"  -delete
