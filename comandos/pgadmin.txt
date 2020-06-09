@@ -1,4 +1,10 @@
 --baixa a imagem do pgadmin e inicia na porta 5050
 --trocar apenas o @@EMAIL e @@SENHA
 docker pull dpage/pgadmin4
-docker run -p 5050:80 -e "PGADMIN_DEFAULT_EMAIL=@@EMAIL" -e "PGADMIN_DEFAULT_PASSWORD=@@SENHA" -d dpage/pgadmin4
+docker run -p 5050:80 --name pgadmin -e "PGADMIN_DEFAULT_EMAIL=@@EMAIL" -e "PGADMIN_DEFAULT_PASSWORD=@@SENHA" -d dpage/pgadmin4
+
+--parar atualizar
+docker stop pgadmin
+docker rm pgadmin
+docker rmi $(docker images --format 'dpage/pgadmin4')
+docker run -p 5050:80 --name pgadmin -e "PGADMIN_DEFAULT_EMAIL=@@EMAIL" -e "PGADMIN_DEFAULT_PASSWORD=@@SENHA" -d dpage/pgadmin4
