@@ -1,0 +1,17 @@
+--comando para instalar o microk8s
+sudo snap install microk8s --classic
+--comando para instalar os modulos de dns e dashboard
+sudo microk8s.enable dns dashboard 
+--comando para habilitar o acesso de fora da máquina (apenas para o ambiente de desenvolvimento)
+sudo microk8s.kubectl proxy --accept-hosts=.* --address=0.0.0.0 & 
+--comando para editar o arquivo de configuracao do dashboard
+sudo microk8s.kubectl -n kube-system edit deploy kubernetes-dashboard -o yaml 
+--adicionar a linha enable-skip-login, salvar e fechar
+spec:
+      containers:
+      - args:
+        - --auto-generate-certificates
+        - --namespace=kube-system
+        - --enable-skip-login
+--url para acesso do dashboard
+http://{IP_address}:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/
