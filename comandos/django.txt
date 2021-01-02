@@ -15,3 +15,8 @@ python manage.py inspectdb > models.py
 --comandos para resetar os registros de migrações (para mac e linux)
 find . -path "*/migrations/*.py" -not -name "__init__.py" -delete
 find . -path "*/migrations/*.pyc"  -delete
+--comando para criar arquivos de tradução
+django-admin makemessages -l en_US --ignore venv
+django-admin makemessages -l pt_BR --ignore venv
+--comando para compilar arquivos de tradução
+django-admin compilemessages --ignore venv
