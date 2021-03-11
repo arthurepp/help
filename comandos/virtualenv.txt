@@ -5,7 +5,7 @@ pip install virtualenv
 virtualenv venv
 
 --comando para criar ambiente virtual (windows, Linux e OSX) com python 3
-virtualenv -p python3.6 venv
+virtualenv -p python3.9 venv
 --comando para ativar o ambiente virtual no Windows
 venv\Scripts\activate
 --comando para ativar o ambiente virtual no Linux ou OSX
