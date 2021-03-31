@@ -1,2 +1,10 @@
 --conectar via ssh
 ssh usuario@ip 
+--copiar arquivo remoto para local
+scp usuario@"ip ou host":/path/origem/arquivo /path/destino/arquivo
+--copiar arquivo local para remoto
+scp /path/destino/arquivo usuario@"ip ou host":/path/origem/arquivo
+--copiar pasta remoto para local
+scp -r usuario@"ip ou host":/path/origem /path/destino
+--copiar pasta local para remoto
+scp -r /path/destino usuario@"ip ou host":/path/origem
