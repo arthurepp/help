@@ -1,5 +1,5 @@
 --conectar via ssh
-ssh usuario@ip 
+ssh usuario@ip -p porta
 --copiar arquivo remoto para local
 scp usuario@"ip ou host":/path/origem/arquivo /path/destino/arquivo
 --copiar arquivo local para remoto
