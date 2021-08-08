@@ -6,6 +6,8 @@ docker rm $(docker ps -a -q)
 docker build -t "nome da imagem" .
 --comando para listar os container ativos
 docker ps
+--comando para copiar todos os arquivos de um diretório
+docker cp ./"caminho do diretório"/. "id do container":"caminho que será copiado"
 --comando para copiar um backup de sqlserver para docker
 docker cp "arquivo" "id do container":"caminho que será copiado"
 --comandos para limpar a máquina
