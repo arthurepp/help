@@ -8,3 +8,5 @@ scp /path/destino/arquivo usuario@"ip ou host":/path/origem/arquivo
 scp -r usuario@"ip ou host":/path/origem /path/destino
 --copiar pasta local para remoto
 scp -r /path/destino usuario@"ip ou host":/path/origem
+--copiar pasta local para remoto com uma porta específica
+scp -P"número da porta" -r /path/destino usuario@"ip ou host":/path/origem
