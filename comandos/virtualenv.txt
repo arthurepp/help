@@ -12,3 +12,6 @@ venv\Scripts\activate
 source venv/bin/activate
 --comando para desativar o ambiente virtual
 deactivate
+
+--para python 3.3 ou superior
+python3 -m venv venv
